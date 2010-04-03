@@ -1,4 +1,5 @@
-This executable document first appeared as a blog post on [...](...)
+This executable document first appeared as a blog post on
+http://jonaquino.blogspot.com/2010/04/nowebpy-or-worlds-first-executable-blog.html
 
 
 
@@ -19,14 +20,26 @@ extract code from [noweb](http://en.wikipedia.org/wiki/Noweb)-format literate pr
 Why do we need to make a new tool if the [noweb](http://en.wikipedia.org/wiki/Noweb)
 tool already exists? Because the noweb tool is hard to install. It's not super-hard,
 but most people don't want to spend time trying to compile it from source. There
-are Windows binaries but you have to get them from the
-[Wayback Machine](http://web.archive.org/web/*/http://www.literateprogramming.com/noweb/nowebinstall.html).
+are Windows binaries but you have to [get](http://web.archive.org/web/*/http://www.literateprogramming.com/noweb/nowebinstall.html)
+them from the Wayback Machine.
 
 Anyway, the noweb tool doesn't seem to do very much, so why not write a little
 script to emulate it?
 
 And that is what we will do now.
 
+
+
+
+
+
+
+
+
+# DOWNLOAD
+
+If you are just interested in the noweb.py script produced by this document,
+you can [download](http://github.com/JonathanAquino/noweb.py/raw/master/noweb.py) it from GitHub.
 
 
 
@@ -196,7 +209,7 @@ Here's how the pieces we have discussed fit together:
 # This program extracts code from a literate programming document in "noweb" format.
 # It was generated from noweb.py.txt, itself a literate programming document.
 # For more information, including the original source code and documentation,
-# see ...
+# see http://jonaquino.blogspot.com/2010/04/nowebpy-or-worlds-first-executable-blog.html
 #
 
 import sys, re
@@ -205,3 +218,5 @@ import sys, re
 <<Recursively expanding the output chunk>>
 <<Outputting the chunks>>
 @
+
+
