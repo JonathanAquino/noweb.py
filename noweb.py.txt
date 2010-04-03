@@ -167,7 +167,7 @@ Try it on this blog post!
 To generate noweb.py from this document, you first need a tool to extract the
 code from it. You can use the original [noweb](http://www.cs.tufts.edu/~nr/noweb/)
 tool, but that's a bit cumbersome to install, so it's easier to use the
-Python script [noweb.py](...).
+Python script [noweb.py](http://github.com/JonathanAquino/noweb.py/raw/master/noweb.py).
 
 Then you can generate noweb.py from noweb.py.html as follows:
 
