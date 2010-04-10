@@ -184,7 +184,7 @@ Python script [noweb.py](http://github.com/JonathanAquino/noweb.py/raw/master/no
 
 Then you can generate noweb.py from noweb.py.html as follows:
 
-    noweb.py -Rnoweb.py noweb.py.noweb > noweb.py
+    noweb.py -Rnoweb.py noweb.py.txt > noweb.py
 
 
 
@@ -215,7 +215,9 @@ Here's how the pieces we have discussed fit together:
 import sys, re
 <<Parsing the command-line arguments>>
 <<Reading in the file>>
+
 <<Recursively expanding the output chunk>>
+
 <<Outputting the chunks>>
 @
 

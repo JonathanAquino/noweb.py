@@ -29,6 +29,7 @@ for line in file:
             chunkName = None
         elif chunkName:
             chunks[chunkName].append(line)
+
 def expand(chunkName, indent):
     chunkLines = chunks[chunkName]
     expandedChunkLines = []
@@ -39,5 +40,6 @@ def expand(chunkName, indent):
         else:
             expandedChunkLines.append(indent + line)
     return expandedChunkLines
+
 for line in expand(outputChunkName, ""):
     print line,
