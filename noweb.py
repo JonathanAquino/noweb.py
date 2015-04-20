@@ -22,7 +22,9 @@ for line in file:
     match = re.match(OPEN + "([^>]+)" + CLOSE + "=", line)
     if match:
         chunkName = match.group(1)
-        chunks[chunkName] = []
+        # If chunkName exists in chunks, then we'll just add to the existing chunk.
+        if not chunkName in chunks:
+            chunks[chunkName] = []
     else:
         match = re.match("@", line)
         if match:
