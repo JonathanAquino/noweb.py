@@ -26,7 +26,11 @@ parser.add_argument(
 )
 parser.add_argument(
     '--out', '-o',
-    help='specify an output file (and chmod +x that file)',
+    help='specify an output file',
+)
+parser.add_argument(
+    '--exectuable', '-x',
+    help='if an output file was specified, chmod +x that file',
 )
 opts = parser.parse_args()
 outputChunkName = opts.ref
@@ -36,7 +40,7 @@ file = open(filename)
 chunkName = None
 pendingChunkName = None
 chunks = {}
-REFERENCE = "^(\s*){{(.*)}}"
+REFERENCE = "^(\s*)#\*(.*)\*#"
 CHUNKNAME = "^\*(.*)\*$"
 CHUNKDELIMITER = "^```(\w*)\s+"
 
@@ -77,5 +81,5 @@ def expand(chunkName, indent):
 
 for line in expand(outputChunkName, ""):
     print(line.rstrip(), file=outfile)
-if opts.out:
+if opts.out and opts.executable:
     os.system("chmod +x " + opts.out)

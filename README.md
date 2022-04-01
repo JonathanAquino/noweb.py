@@ -118,7 +118,7 @@ chunk.
 
 *Regular expressions*
 ```python
-REFERENCE = "^(\s*){{(.*)}}"
+REFERENCE = "^(\s*)#*(.*)}}"
 CHUNKNAME = "^\*(.*)\*$"
 CHUNKDELIMITER = "^```(\w*)\s+"
 ```
@@ -132,7 +132,7 @@ file = open(filename)
 chunkName = None
 pendingChunkName = None
 chunks = {}
-{{Regular expressions}}
+#*Regular expressions}}
 
 for line in file:
     match = re.match(CHUNKNAME, line)
@@ -247,10 +247,10 @@ see http://jonaquino.blogspot.com/2010/04/nowebpy-or-worlds-first-executable-blo
 """
 
 import os, sys, re, argparse
-{{Parsing the command-line arguments}}
-{{Reading in the file}}
+#*Parsing the command-line arguments}}
+#*Reading in the file}}
 
-{{Recursively expanding the output chunk}}
+#*Recursively expanding the output chunk}}
 
-{{Outputting the chunks}}
+#*Outputting the chunks}}
 ```
